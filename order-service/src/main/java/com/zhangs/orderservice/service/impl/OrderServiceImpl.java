@@ -26,7 +26,10 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public R getOrderById(String id) {
         //根据订单id获取商品信息
+        //使用ribbon方式
 //        String forObject = restTemplate.getForObject("http://product-server/product/findById?id=" + id, String.class);
+
+        //使用feign方式
         R byId = productFeiginClient.findById(id);
         return byId;
 
