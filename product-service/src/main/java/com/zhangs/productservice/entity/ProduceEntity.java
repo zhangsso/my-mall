@@ -17,4 +17,10 @@ public class ProduceEntity {
     private BigDecimal price;
     private String color;
 
+    public ProduceEntity(String id, String name, BigDecimal price, String color) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.color = color;
+    }
 }
