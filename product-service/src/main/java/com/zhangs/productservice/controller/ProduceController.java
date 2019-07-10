@@ -1,6 +1,6 @@
 package com.zhangs.productservice.controller;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import com.zhangs.productservice.common.utils.R;
 import com.zhangs.productservice.entity.ProduceEntity;
 import com.zhangs.productservice.service.ProduceService;

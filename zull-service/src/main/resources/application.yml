@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: api-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#添加访问前缀，还有很多可以转发、忽略等配置，可以参考官方文档
+zuul:
+  prefix: /api-gateway
+  strip-prefix: true
+
