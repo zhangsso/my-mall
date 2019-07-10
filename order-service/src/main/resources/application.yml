@@ -15,7 +15,7 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 
-#自定义负载均衡策略.改为随机，默认是轮询的方式，
+#自定义负载均衡策略.改为随机，默认是轮询的方式
 product-server:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
@@ -26,6 +26,10 @@ feign:
   client:
     config:
       default:
-        connectTimeout: 5000
-        readTimeout: 5000
+        connectTimeout: 2000
+        readTimeout: 2000
+  hystrix:
+    enabled: true
+  #禁用hystrix，不建议这么做，这里只是测试hystrix默认是开启的，并且超时时间只有1s
+#    enabled: false
 
